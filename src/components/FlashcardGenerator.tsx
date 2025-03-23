@@ -30,7 +30,7 @@ export function FlashcardGenerator({ content }: FlashcardGeneratorProps) {
 
     setIsGenerating(true);
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
       const prompt = `Generate 5 flashcards from this content. Each flashcard should have a question and answer. Return ONLY a JSON array where each item has 'question' and 'answer' fields. Do not include any markdown formatting or additional text. Content: ${content}`;
 
       const result = await model.generateContent(prompt);

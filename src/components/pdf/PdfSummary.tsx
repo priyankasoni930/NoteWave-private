@@ -21,10 +21,10 @@ export function PdfSummary({ text, onSummaryGenerated }: PdfSummaryProps) {
   useEffect(() => {
     const getSummary = async () => {
       if (!text || hasGenerated) return;
-      
+
       setIsLoading(true);
       try {
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
         const prompt = `Please provide a concise summary of the following text: ${text}`;
         const result = await model.generateContent(prompt);
         const response = await result.response;
@@ -57,11 +57,7 @@ export function PdfSummary({ text, onSummaryGenerated }: PdfSummaryProps) {
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle>Summary</CardTitle>
         {summary && !isLoading && (
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={handleSpeechToggle}
-          >
+          <Button variant="outline" size="icon" onClick={handleSpeechToggle}>
             {isSpeaking ? (
               <VolumeX className="h-4 w-4" />
             ) : (

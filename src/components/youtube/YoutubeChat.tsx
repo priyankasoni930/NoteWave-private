@@ -27,7 +27,7 @@ export function YoutubeChat({ transcript }: YoutubeChatProps) {
 
     setIsLoading(true);
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
       const prompt = `Based on this video transcript: "${transcript}", please answer the following question: ${question}`;
 
       const result = await model.generateContent(prompt);

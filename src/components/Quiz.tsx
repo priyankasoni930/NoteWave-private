@@ -35,7 +35,7 @@ export function Quiz({ content }: QuizProps) {
 
     setIsGenerating(true);
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
       const prompt = `Generate a quiz with 5 multiple choice questions based on this content. Each question should have 4 options with only one correct answer. Return ONLY a JSON array where each item has 'question', 'options' (array of 4 strings), and 'correctAnswer' (index 0-3) fields. Content: ${content}`;
 
       const result = await model.generateContent(prompt);
