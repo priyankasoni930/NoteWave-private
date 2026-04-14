@@ -291,7 +291,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1 + i * 0.1, duration: 0.5 }}
-            className="flex flex-col items-center gap-1 py-5 px-3 rounded-2xl bg-white/80 border border-note-fg/[0.06] shadow-sm backdrop-blur-sm"
+            className="flex flex-col items-center justify-center gap-1 py-5 px-3 rounded-2xl bg-white/80 border border-note-fg/[0.06] shadow-sm backdrop-blur-sm"
           >
             <stat.icon size={16} className="text-note-green mb-1" />
             <p className="text-2xl font-bold text-note-fg font-serif">{stat.value}</p>
