@@ -12,6 +12,7 @@ import {
   Users, Youtube, Check, ChevronRight, Zap, BookOpen, Volume2, Brain,
   Layers, Link, Quote, Star,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // ============================================================
 // REUSABLE: WaveBar
