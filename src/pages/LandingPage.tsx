@@ -158,6 +158,7 @@ const Navbar = () => {
 const stats = [
   { icon: Clock, value: "8+", label: "Hours Saved / week" },
   { icon: Mic, value: "98%", label: "Transcription Accuracy" },
+  { icon: GraduationCap, value: "Multiple", label: "Languages" },
   { icon: FileText, value: "100+", label: "Notes Generated" },
 ];
 
