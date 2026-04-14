@@ -95,15 +95,24 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <Link to="/auth">
           <button
             className="text-note-fg/[0.55] hover:text-note-fg transition-colors px-4 py-2 font-mono"
             style={{ fontSize: "12px" }}
           >
-            Sign In
+            Start Meeting 
           </button>
+          </Link>
+          <Link to="/youtube">
           <button className="text-sm font-semibold px-5 py-2 rounded-full bg-note-fg hover:bg-note-green-dark text-white transition-all duration-300 shadow-sm">
-            Start Free
+            Chat with YT video
           </button>
+          </Link>
+           <Link to="/pdf">
+          <button className="text-sm font-semibold px-5 py-2 rounded-full bg-note-fg hover:bg-note-green-dark text-white transition-all duration-300 shadow-sm">
+            Chat with PDF
+          </button>
+          </Link>
         </div>
 
         <button
@@ -148,8 +157,7 @@ const Navbar = () => {
 const stats = [
   { icon: Clock, value: "8+", label: "Hours Saved / week" },
   { icon: Mic, value: "98%", label: "Transcription Accuracy" },
-  { icon: GraduationCap, value: "40+", label: "Languages" },
-  { icon: FileText, value: "2M+", label: "Notes Generated" },
+  { icon: FileText, value: "100+", label: "Notes Generated" },
 ];
 
 const phrases = ["Lecture Notes.", "Meeting Recaps.", "YouTube Insights.", "PDF Summaries."];
@@ -238,14 +246,12 @@ const HeroSection = () => {
         transition={{ duration: 0.7, delay: 0.65 }}
         className="relative mt-10 flex flex-col sm:flex-row gap-4 items-center"
       >
+        <Link to="/auth">
         <button className="group flex items-center gap-2 px-7 py-3.5 rounded-full bg-note-fg hover:bg-note-green-dark transition-all duration-300 font-semibold text-sm text-white shadow-md">
           Start Taking Notes Free
           <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
         </button>
-        <button className="flex items-center gap-2 px-7 py-3.5 rounded-full border border-note-fg/[0.15] hover:border-note-green/50 text-note-muted hover:text-note-fg transition-all text-sm bg-white/70">
-          <Play size={13} className="fill-note-muted" />
-          Watch Demo
-        </button>
+        </Link>
       </motion.div>
 
       {/* Social proof */}
@@ -650,18 +656,6 @@ const FeaturesSection = () => {
 
           {/* Right side preview with animation */}
           <div className="flex-1 sticky top-24 self-start">
-            <div className="flex justify-center gap-2 mb-4">
-              {features.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    i === activeIndex ? "bg-note-green-dark w-6" : "bg-note-fg/20 w-2"
-                  }`}
-                />
-              ))}
-            </div>
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={cardKey}
@@ -1060,13 +1054,15 @@ const CTASection = () => {
               <em className="text-note-green">notes today</em>
             </h2>
             <p className="text-note-muted text-base mb-10 max-w-md mx-auto leading-relaxed">
-              Join 12,000+ students, researchers, and professionals who've transformed how they learn and work.
+              Join students, researchers, and professionals who've transformed how they learn and work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/auth">
               <button className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-note-fg hover:bg-note-green-dark transition-all duration-300 font-semibold text-base text-white shadow-md">
                 Get Started — It's Free
                 <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform" />
               </button>
+              </Link>
             </div>
             <p className="text-note-subtle mt-5 font-mono" style={{ fontSize: "10px" }}>
               no credit card required · free forever plan available
@@ -1159,8 +1155,7 @@ note: {
 /*
 .font-serif {
   font-family: Georgia, "Times New Roman", serif;
-}
-.font-mono {
-  font-family: ui-monospace, "Courier New", monospace;
-}
+  }
+  .font-mono {
+    font-family: ui-monospace, "Courier New", monospace;
 */
