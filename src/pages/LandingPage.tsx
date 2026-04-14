@@ -274,7 +274,7 @@ const HeroSection = () => {
           ))}
         </div>
         <span>
-          <strong className="text-note-fg">12,000+</strong> students &amp; professionals
+          <strong className="text-note-fg">100+</strong> students &amp; professionals
         </span>
       </motion.div>
 
