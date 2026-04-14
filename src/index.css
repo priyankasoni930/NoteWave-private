@@ -21,6 +21,13 @@
   }
 }
 
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.font-mono {
+  font-family: ui-monospace, "Courier New", monospace;
+}
+
 @layer components {
   .sidebar-item {
     @apply flex items-center gap-3 px-6 py-3 text-muted hover:bg-secondary rounded-r-full transition-colors cursor-pointer;

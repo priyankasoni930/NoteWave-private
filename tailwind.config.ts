@@ -41,6 +41,16 @@ export default {
           DEFAULT: "#a1a1a1",
           background: "#1a1a1a",
         },
+        note: {
+          bg: "#F4F6F3",
+          fg: "#2B2B2B",
+          green: "#7A9E7E",
+          "green-dark": "#4D7A52",
+          "green-light": "#A8C5AC",
+          muted: "#5C5C5C",
+          subtle: "#8C8C8C",
+          alt: "#EEF2EE",
+        },
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
